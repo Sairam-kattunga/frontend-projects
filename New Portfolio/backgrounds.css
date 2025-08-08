@@ -1,0 +1,78 @@
+/* Subtle Background Images for Light and Dark Modes */
+
+/* Light Mode Background */
+body.light-mode {
+    background: linear-gradient(135deg, 
+        rgba(247, 249, 252, 0.95) 0%, 
+        rgba(240, 245, 250, 0.95) 50%, 
+        rgba(235, 240, 245, 0.95) 100%),
+        radial-gradient(circle at 20% 80%, rgba(39, 152, 208, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(37, 117, 252, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(39, 152, 208, 0.02) 0%, transparent 50%);
+    background-attachment: fixed;
+    background-size: 100% 100%, 800px 800px, 600px 600px;
+    background-position: 0 0, 0 0, 0 0;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-color: #f5f7fa; /* fallback color */
+}
+
+/* Dark Mode Background */
+body:not(.light-mode) {
+    background: linear-gradient(135deg, 
+        rgba(0, 0, 0, 0.98) 0%, 
+        rgba(5, 5, 5, 0.98) 50%, 
+        rgba(10, 10, 10, 0.98) 100%),
+        radial-gradient(circle at 15% 85%, rgba(39, 152, 208, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 85% 15%, rgba(37, 117, 252, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(39, 152, 208, 0.03) 0%, transparent 60%);
+    background-attachment: fixed;
+    background-size: 100% 100%, 1000px 1000px, 700px 700px;
+    background-position: 0 0, 0 0, 0 0;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-color: #000; /* fallback color */
+}
+
+/* Enhanced theme transition */
+body {
+    transition: background 0.4s ease, color 0.3s ease;
+}
+
+/* Optional: Override existing gradient animation */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Ensure content remains readable */
+.container, .card, header {
+    position: relative;
+    z-index: 1;
+}
+
+/* Enhanced card styling for better contrast */
+.card {
+    background: rgba(var(--card-bg-color), 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Light mode card enhancement */
+body.light-mode .card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(224, 224, 224, 0.3);
+}
+
+/* Dark mode card enhancement */
+body:not(.light-mode) .card {
+    background: rgba(17, 17, 17, 0.9);
+    border: 1px solid rgba(51, 51, 51, 0.3);
+}
+
+/* Responsive background sizing */
+@media (max-width: 768px) {
+    body.light-mode,
+    body:not(.light-mode) {
+        background-size: 100% 100%, 400px 400px, 300px 300px;
+    }
+}

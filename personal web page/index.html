@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K. R. V. M. SAIRAM's Personal Webpage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            margin: 0;
+            font-size: 1.2em;
+        }
+        nav {
+            background-color: #444;
+            display: flex;
+            justify-content: center;
+            padding: 0.5em 0;
+        }
+        nav a {
+            color: white;
+            padding: 0.8em 1.2em;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .container {
+            width: 80%;
+            margin: 2em auto;
+        }
+        .section {
+            margin-bottom: 3em;
+        }
+        .section h2 {
+            text-align: center;
+            color: #333;
+            font-size: 2em;
+            margin-bottom: 1em;
+        }
+        .section p {
+            text-align: center;
+            font-size: 1.2em;
+            line-height: 1.6em;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .contact-form input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 5px;
+            font-size: 1.1em;
+        }
+        .contact-form input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .projects-list, .blog-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .project, .blog-post {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 1em;
+            padding: 1em;
+            width: 250px;
+            text-align: center;
+        }
+        .project h3, .blog-post h3 {
+            margin-bottom: 0.5em;
+            font-size: 1.5em;
+        }
+        .project p, .blog-post p {
+            font-size: 1em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>K. R. V. M. SAIRAM</h1>
+        <p>B.Tech Final Year Student</p>
+    </header>
+
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+        <a href="#blog">Blog</a>
+    </nav>
+
+    <div class="container">
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>Hello! I am K. R. V. M. SAIRAM, currently in my final year of B.Tech. I have a strong passion for technology and innovation. I am enthusiastic about learning new skills and applying them to solve real-world problems.</p>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="projects-list">
+                <div class="project">
+                    <h3>Project 1</h3>
+                    <p>Description of project 1.</p>
+                </div>
+                <div class="project">
+                    <h3>Project 2</h3>
+                    <p>Description of project 2.</p>
+                </div>
+                <div class="project">
+                    <h3>Project 3</h3>
+                    <p>Description of project 3.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="resume" class="section">
+            <h2>Resume</h2>
+            <p>You can download my resume <a href="resume.pdf" download>here</a>.</p>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <form class="contact-form" action="mailto:your.email@example.com" method="post" enctype="text/plain">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <input type="submit" value="Send">
+            </form>
+        </section>
+
+        <section id="blog" class="section">
+            <h2>Blog</h2>
+            <div class="blog-list">
+                <div class="blog-post">
+                    <h3>Blog Post 1</h3>
+                    <p>Summary of blog post 1.</p>
+                </div>
+                <div class="blog-post">
+                    <h3>Blog Post 2</h3>
+                    <p>Summary of blog post 2.</p>
+                </div>
+                <div class="blog-post">
+                    <h3>Blog Post 3</h3>
+                    <p>Summary of blog post 3.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 K. R. V. M. SAIRAM. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
